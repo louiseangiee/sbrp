@@ -43,22 +43,22 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run unit tests
       run: |
-        python flask_webapp/test_unit_create_role.py
-        python flask_webapp/test_unit_edit_listing.py
-        python flask_webapp/test_unit_apply_role.py
-        python flask_webapp/test_unit_view_roleskill_match.py
-        python flask_webapp/test_unit_view_listings_HR.py
-        python flask_webapp/test_unit_view_open_listings.py
+        python flask_webapp/tests/unit/test_unit_create_role.py
+        python flask_webapp/tests/unit/test_unit_edit_listing.py
+        python flask_webapp/tests/unit/test_unit_apply_role.py
+        python flask_webapp/tests/unit/test_unit_view_roleskill_match.py
+        python flask_webapp/tests/unit/test_unit_view_listings_HR.py
+        python flask_webapp/tests/unit/test_unit_view_open_listings.py
         
            
         
 
     - name: Run integration tests
       run: |
-        python flask_webapp/test_integration_apply_role.py
-        python flask_webapp/test_integration_role_skill_match.py
-        python flask_webapp/test_integration_edit_listing.py
-        python flask_webapp/test_integration_view_open_listings.py
-        python flask_webapp/test_integration_view_listings_HR.py
+        python flask_webapp/tests/integration/test_integration_apply_role.py
+        python flask_webapp/tests/integration/test_integration_role_skill_match.py
+        python flask_webapp/tests/integration/test_integration_edit_listing.py
+        python flask_webapp/tests/integration/test_integration_view_open_listings.py
+        python flask_webapp/tests/integration/test_integration_view_listings_HR.py
         
       
