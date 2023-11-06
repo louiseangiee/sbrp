@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> All-in-One portal </title>
+
+  <!-- Script to fetch data from database -->
+  <script src="{{url_for('static', filename='assets/js/edit_role_listing.js')}}"></script>
+
+
+
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+
+
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="static/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Aug 30 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    /* Add custom styling for the dropdown */
+    .custom-dropdown {
+         position: relative;
+         display: inline-block;
+     }
+  
+     .custom-dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: #f9f9f9;
+         min-width: 300px;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         z-index: 1;
+         /* Make options appear vertically */
+         top: 100%;
+         left: 0;
+     }
+  
+     .custom-dropdown-content label {
+         display: block;
+         padding: 5px 10px;
+         cursor: pointer;
+     }
+  
+     .custom-dropdown-content label:hover {
+         background-color: #ddd;
+     }
+  
+     /* Style for the search input */
+     .search-input {
+         width: 100%;
+         padding: 5px;
+         border: none;
+         border-bottom: 1px solid #ccc;
+         margin-bottom: 10px;
+     }
+
+    #header {
+      background-color: #b8e6cb;
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="/all_listings_HR" class="logo d-flex align-items-center">
+        <img src="static/assets/img/logologo.png" alt="">
+        <span class="d-none d-lg-block">SBRP(Admin)</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="static/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+        
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="/HR_profile">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="{{ url_for('logout')}}">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      
+      <a class="nav-item d-flex flex-column align-items-center justify-content-center" href="#" data-bs-toggle="dropdown">
+        <img src="static/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+        <div class="text-center">
+          <span class="d-none d-md-block">K. Anderson</span>
+        </div>
+      </a><!-- End Profile Image Icon -->
+      
+      <li class="nav-item">
+       
+        <a class="nav-link " href="/HR_profile">
+          <i class="bi bi-grid"></i>
+          <span>Profile</span>
+        </a>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i><span>Jobs</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="/all_listings_staff/1">
+                <i class="bi bi-circle"></i><span>All roles</span>
+              </a>
+            </li>
+            <li>
+              <a href="/applied_roles_staff">
+                <i class="bi bi-circle"></i><span>My applied roles</span>
+              </a>
+            </li>
+            
+            
+          </ul>
+        </li><!-- End Components Nav -->
+      </li><!-- End Dashboard Nav -->
+     
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Create New Role</h1>
+      <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">Home</a></li>
+            <li class="breadcrumb-item"><a href="applied_roles">Application</a></li>
+            <li class="breadcrumb-item active"><a href="role_creation">Role Creation</a></li>
+        </ol>
+        
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      
+        <div class="col-lg">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title d-flex justify-content-center">Role Details</h5>
+
+              <!-- General Form Elements -->
+              <form>
+
+                <!-- Role -->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Role Name</label>
+
+                  <div class="col-sm-10">
+
+                    <select class="form-select" aria-label="createRoleDropdown" id = "createRoleDropdown">
+                      <option disabled selected>Select a role</option>
+                    </select> 
+                  </div>
+                </div>
+
+                 <!-- Department -->
+                 <div id="dcDropdown">
+                 <div class="row mb-3">
+                  <label for="inputDepartment" class="col-sm-2 col-form-label">Department</label>
+                  
+                  <div class="col-sm-10">
+
+                    <!-- Department -->
+                    <select class="form-select" aria-label="createSelectDepartment" id = "createDepartmentDropdown">
+                      <option disabled selected>Select a department</option>
+                    </select>
+                  </div>
+                  </div>
+
+                <!-- Country -->
+                <div class="row mb-3">
+                  <label for="inputCountry" class="col-sm-2 col-form-label">Country</label>
+                  
+                  <div class="col-sm-10">
+
+                    <!-- Country Dropdown List -->
+                    <select class="form-select" aria-label="createSelectCountry" id = "createCountryDropdown">
+                      <option disabled selected>Select a country</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Vacancy -->
+                <div class="row mb-3">
+                  <label for="inputVacancy" class="col-sm-2 col-form-label">Vacancy</label>
+                  <div class="col-sm-10">
+                    <!-- Vacancy Input Field -->
+                    <input type="number" class="form-control" id="createVacancyInput" min="1" required><p class="text-danger" id="vacancyInputWarning" style="color: red; font-size: 12px;">
+                      Please enter a value of at least 1.
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="row mb-3">
+                  <label for="inputCountry" class="col-sm-2 col-form-label">Required skills</label>
+                  <div class="col-sm-10">
+                    <button class="btn btn-secondary" type="button" id="skillsSelectBtn"  data-bs-toggle="modal" data-bs-target="#skillSelectModal" disabled>
+                      Add skills
+                    </button>
+
+                    <!-- Modal -->
+                <div class="modal fade" id="skillSelectModal" tabindex="-1" aria-labelledby="skillSelectModal" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5">List of Skills</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-body" id="skillSelectModalBody">
+                        <!-- Each skill gets a checkbox -->
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success" id="defaultSkillBtn" data-bs-dismiss="modal"></button>
+                        <button type="button" class="btn btn-danger" id ="clearAllBtn" data-bs-dismiss="modal">Reset</button>
+                        <button type="button" class="btn btn-primary" id="saveSelection" data-bs-dismiss="modal">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+
+                    <a id="skillsError">Please select a role.</a>
+
+                    <div class="container">
+
+                      <div class="row" id="selectedSkills">
+                      </div>
+                    </div>
+                    <div id="noSkillsError" hidden class="text-danger">Please select at least 1 skill.</div>               
+
+                  
+                  </div>          
+                </div>
+
+                <!-- Include Bootstrap and jQuery JS -->
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+              
+      
+             
+          <div class="row my-3">
+                <label for="inputResponsibility" class="col-sm-2 py-2 col-form-label">Responsibilities</label>
+                <p class="text-danger" id="no_desc_error" style="color: red; font-size: 14px;">
+                  Please enter a description.
+                </p>
+                <div class="row" >
+                    <textarea id="create_role_desc" class="form-control" style="height: 100px"></textarea>
+                 
+                </div>
+          </div>
+
+              
+
+                <div class="row my-3">
+                  <label for="inputReportingMng" class="col-sm-2 col-form-label">Reporting Manager</label>
+                  <div class="col-sm-10" id="managerOptions">
+                    <input id="reportingMngError" type="text" class="form-control" placeholder="Please select department and country." disabled>
+                    <select class="form-select" aria-label="createSelectManager" id = "createManagerDropdown" hidden>
+                    </select>                  
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputDate" class="col-sm-2 col-form-label">Start Date</label>
+                  <div class="col-sm-10">
+                    <input type="date" class="form-control" id="startDate">
+                  </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">Deadline</label>
+                    <div class="col-sm-10">
+                      <input id="deadlineError" type="text" class="form-control" placeholder="Please select a start date" disabled>
+                      <input type="date" class="form-control" id="endDate" hidden>
+                    </div>
+                </div>
+                <!-- submit button -->
+                <div class="row mb-3 pt-3 d-flex justify-content-center">
+                    <div class="d-flex justify-content-center mt-4">
+                      <button type="button" class="btn btn-primary" id="create_btn" data-bs-toggle="modal" data-bs-target="#createMsg" disabled>Submit</button>
+
+                      <!-- Modal -->
+<div class="modal fade" id="createMsg" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createMsgLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="createMsgLabel"></h1>      </div>
+      <div class="modal-body" id="createMsgBody">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cannotCreate" data-bs-dismiss="modal" hidden>Close</button>
+        <button type="button" class="btn btn-primary" id="backToListings" hidden>Back to all listings</button>
+      </div>
+    </div>
+  </div>
+</div>
+                    </div>
+                </div>
+
+              </form><!-- End General Form Elements -->
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+ 
+
+  </main><!-- End #main -->
+
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="static/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="static/assets/vendor/quill/quill.min.js"></script>
+  <script src="static/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="static/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+    
+
+
+
+</body>
+
+</html>
